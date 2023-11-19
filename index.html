@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      crossorigin
-      href="/ig-assets/fonts/fontawesome-webfont.woff2?v=4.7.0"
-    />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,12 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@800&display=swap"
       rel="stylesheet"
     />
-    <link href="/sb/igloo-css-bundle.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/css/generated-themes/ig-theme-aQ2cVAZ16kWZSEBMxWdMjg.css?v=181120232156"
+      href="styles/theme.css"
     />
+    <script src="https://kit.fontawesome.com/f79d59b572.js" crossorigin="anonymous"></script>
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -159,10 +154,6 @@
     data-siteid="1298"
     data-culture="en-US"
   >
-    <a href="#content" class="button skip-link">Jump to content</a>
-
-    <div class="io-hook"></div>
-
     <div class="pre-top pre-top--dark pre-top--scroll-bg pre-top--scroll-dark">
       <div class="container container--big">
         <div class="row">
@@ -298,125 +289,37 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="col-40 col-s-100">
+            <div class="col-40 col-s-100">
               <div class="grid-item grid-item--slider">
                 <div
                   class="slider js-flickity"
-                  data-flickity-options='
-    		{
-    			"cellAlign": "left",
-    			"contain": 1,
-    			"prevNextButtons": 1,
-    			"pageDots": 1,
-    			"setGallerySize": 1,
-    			"imagesLoaded": 1,
-    			"wrapAround": 1,
-    			"autoPlay": 0,
-    			"pauseAutoPlayOnHover": 0,
-    			"adaptiveHeight": 0,
-    			"fade": 0
-    		}
-    	'
+                  data-flickity-options=
+                  '{
+                    "cellAlign": "left",
+                    "contain": 1,
+                    "prevNextButtons": 1,
+                    "pageDots": 1,
+                    "setGallerySize": 1,
+                    "imagesLoaded": 1,
+                    "wrapAround": 1,
+                    "autoPlay": 0,
+                    "pauseAutoPlayOnHover": 0,
+                    "adaptiveHeight": 0,
+                    "fade": 0
+                  }'
                 >
                   <div class="row row--flat" style="width: 100%">
                     <div class="col- col-s-100">
                       <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/d3ef1d13490e4586a0cd4cbe48c354b4?utm_campaign=embed&utm_source=other&heading=21.02&pitch=-19.22&field-of-view=89&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
+                        <a-scene>
+                          <a-sky src="360_img_1.jpg" rotation="0 -130 0"></a-sky>
+                        </a-scene>
                       </div>
                     </div>
                   </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/7a1a50bd6ea04138b0c6065a9b87a88c?utm_campaign=embed&utm_source=other&heading=-124.57&pitch=-18.16&field-of-view=89&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
                   </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/40a32a94b3c7487c80efe109e78ccea6?utm_campaign=embed&utm_source=other&heading=113.49&pitch=-18.88&field-of-view=89&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/389cb22eaf3640249fff09c777d3e045?utm_campaign=embed&utm_source=other&heading=-10.95&pitch=-7.28&field-of-view=96&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/f324817ef3ed48f182d82dadd2226a92?utm_campaign=embed&utm_source=other&heading=-40.43&pitch=-14.08&field-of-view=100&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/775db280dd5b4fbbaf432ccbcefd6b3f?utm_campaign=embed&utm_source=other&heading=-42.59&pitch=-4.38&field-of-view=99.5&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/a133a2b24478426bb40c6da0d0bfc11b?utm_campaign=embed&utm_source=other&heading=235.18&pitch=-11.88&field-of-view=75&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <iframe
-                          height="450px"
-                          width="100%"
-                          allowfullscreen="false"
-                          src=" https://momento360.com/e/u/e21c06a5eba244f2a86d24423fd60671?utm_campaign=embed&utm_source=other&heading=134.52&pitch=8.78&field-of-view=75&size=medium&display-plan=true&hide-cardboard=true&pan-speed=0"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -434,7 +337,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Stomatologia zachowawcza</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -450,7 +353,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Endodoncja</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -467,7 +370,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Chirurgia stomatologiczna</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -486,7 +389,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Protetyka</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -503,7 +406,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Profilaktyka</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -521,7 +424,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Implantologia</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -542,7 +445,7 @@
                 <div class="acc">
                   <button class="acc__head">
                     <span>Radiologia</span>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div class="acc__body">
                     <p>
@@ -1153,6 +1056,6 @@
       ></iframe>
     </noscript>
 
-    <script src="/sb/igloo-js-bundle.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
