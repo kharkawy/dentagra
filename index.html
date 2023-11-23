@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -148,12 +146,15 @@
           '<script src="/scripts/lib/ie11CustomProperties.js"><\x2fscript>'
         );
     </script>
+    <script src="./scripts/aframe.min.js"></script>
   </head>
   <body
     class="page-loading pre-top-visible"
     data-siteid="1298"
     data-culture="en-US"
   >
+  <div class="io-hook"></div>
+
     <div class="pre-top pre-top--dark pre-top--scroll-bg pre-top--scroll-dark">
       <div class="container container--big">
         <div class="row">
@@ -255,7 +256,7 @@
 
       <div class="block grid white-bg animate">
         <div class="container container--big">
-          <div class="row row--space-between row--v-bottom">
+          <div class="row row--space-between row--v-top">
             <div class="col-50 col-s-100">
               <div class="grid-item grid-item--text">
                 <h2>O gabinecie</h2>
@@ -289,35 +290,105 @@
                 </p>
               </div>
             </div>
-            <div class="col-40 col-s-100">
-              <div class="grid-item grid-item--slider">
-                <div
-                  class="slider js-flickity"
-                  data-flickity-options=
-                  '{
-                    "cellAlign": "left",
-                    "contain": 1,
-                    "prevNextButtons": 1,
-                    "pageDots": 1,
-                    "setGallerySize": 1,
-                    "imagesLoaded": 1,
-                    "wrapAround": 1,
-                    "autoPlay": 0,
-                    "pauseAutoPlayOnHover": 0,
-                    "adaptiveHeight": 0,
-                    "fade": 0
-                  }'
-                >
-                  <div class="row row--flat" style="width: 100%">
-                    <div class="col- col-s-100">
-                      <div class="grid-item grid-item--code">
-                        <a-scene>
-                          <a-sky src="360_img_1.jpg" rotation="0 -130 0"></a-sky>
-                        </a-scene>
-                      </div>
-                    </div>
+            <div class="col-50 col-s-100">
+              <div class="grid-item">
+                <div class="css_slider">
+                  <div class="css_slider-overlay"></div>
+                  <s id="s1"></s> 
+                  <s id="s2"></s>
+                  <s id="s3"></s>
+                  <s id="s4"></s>
+                  <s id="s5"></s> 
+                  <s id="s6"></s>
+                  <s id="s7"></s>
+                  <s id="s8"></s>
+                  <s id="s9"></s> 
+                  <s id="s10"></s>
+                  <s id="s11"></s>
+                  <div class="slider">
                   </div>
+                  <div class="prevNext">
+                    <div><a href="#s4"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s2"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s1"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s3"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s2"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s4"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s3"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s5"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s4"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s6"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s5"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s7"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s6"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s8"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s7"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s9"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s8"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s10"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s9"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s11"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
+                    <div><a href="#s10"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg></a><a href="#s1"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                          <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                            transform="translate(100, 100) rotate(180) "></path>
+                        </svg></a></div>
                   </div>
+                  <div class="bullets">
+                    <a href="#s1"></a>
+                    <a href="#s2"></a>
+                    <a href="#s3"></a>
+                    <a href="#s4"></a>
+                    <a href="#s5"></a>
+                    <a href="#s6"></a>
+                    <a href="#s7"></a>
+                    <a href="#s8"></a>
+                    <a href="#s9"></a>
+                    <a href="#s10"></a>
+                    <a href="#s11"></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -967,62 +1038,6 @@
         new Date().getFullYear();
     </script>
 
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Fullscreen"
-            ></button>
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom"
-            ></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-          >
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button
-            class="pswp__button pswp__button--arrow--left"
-            title="Previous (left arrow)"
-          ></button>
-          <button
-            class="pswp__button pswp__button--arrow--right"
-            title="Next (right arrow)"
-          ></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-JDX1709F5X"
@@ -1057,5 +1072,67 @@
     </noscript>
 
     <script src="scripts/script.js"></script>
+
+    <script>
+      setTimeout(() => {
+        document.querySelector('.css_slider .slider').innerHTML = `
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_10.jpg" rotation="0 160 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_9.jpg" rotation="0 -60 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_1.jpg" rotation="0 20 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_11.jpg" rotation="0 -60 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_5.jpg" rotation="0 180 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_6.jpg" rotation="0 90 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_7.jpg" rotation="0 -150 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_8.jpg" rotation="0 180 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_2.jpg" rotation="0 60 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_3.jpg" rotation="0 20 0"></a-sky>
+                      </a-scene>
+                    </div>
+                    <div style="background:#f7f7f7;">
+                      <a-scene embedded xr-mode-ui="enabled: false;">
+                        <a-sky src="360_4.jpg" rotation="0 -90 0"></a-sky>
+                      </a-scene>
+                    </div>
+                  `;
+      }, 5000);
+    </script>
   </body>
 </html>
