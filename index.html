@@ -290,9 +290,9 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="col-50 col-s-100">
+            <div class="col-50 col-s-100">
               <div class="grid-item">
-                <div class="css_slider">
+                <div id="css_slider" class="css_slider css_slider--hide">
                   <div class="css_slider-overlay"></div>
                   <s id="s1"></s> 
                   <s id="s2"></s>
@@ -308,7 +308,7 @@
                   <div class="slider">
                   </div>
                   <div class="prevNext">
-                    <div><a href="#s4"><svg class="flickity-button-icon" viewBox="0 0 100 100">
+                    <div><a href="#s11"><svg class="flickity-button-icon" viewBox="0 0 100 100">
                           <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
                         </svg></a><a href="#s2"><svg class="flickity-button-icon" viewBox="0 0 100 100">
                           <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
@@ -390,7 +390,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -1073,66 +1073,115 @@
 
     <script src="scripts/script.js"></script>
 
-    <!-- <script>
-      setTimeout(() => {
-        document.querySelector('.css_slider .slider').innerHTML = `
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_10.jpg" rotation="0 160 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_9.jpg" rotation="0 -60 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_1.jpg" rotation="0 20 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_11.jpg" rotation="0 -60 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_5.jpg" rotation="0 180 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_6.jpg" rotation="0 90 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_7.jpg" rotation="0 -150 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_8.jpg" rotation="0 180 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_2.jpg" rotation="0 60 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_3.jpg" rotation="0 20 0"></a-sky>
-                      </a-scene>
-                    </div>
-                    <div style="background:#f7f7f7;">
-                      <a-scene embedded xr-mode-ui="enabled: false;">
-                        <a-sky src="360_4.jpg" rotation="0 -90 0"></a-sky>
-                      </a-scene>
-                    </div>
-                  `;
-      }, 5000);
-    </script> -->
+    <script>
+      const cssSlider = document.querySelector('#css_slider');
+      const slider = document.querySelector('#css_slider .slider');
+      const prevNextButtons = document.querySelectorAll('#css_slider .prevNext a');
+      const navItems = document.querySelectorAll(".bullets a, .prevNext a");
+      const hideCssSliderSelector = 'css_slider--hide';
+      const currentUrl = new URL(window.location.href);
+      const loadedSlides = [];
+      const imagesData = [
+          {
+            id: 10,
+            rotation: 160
+          },
+          {
+            id: 9,
+            rotation: -60
+          },
+          {
+            id: 1,
+            rotation: 20
+          },
+          {
+            id: 11,
+            rotation: -60
+          },
+          {
+            id: 5,
+            rotation: 180
+          },
+          {
+            id: 6,
+            rotation: 90
+          },
+          {
+            id: 7,
+            rotation: -150
+          },
+          {
+            id: 8,
+            rotation: 180
+          },
+          {
+            id: 2,
+            rotation: 60
+          },
+          {
+            id: 3,
+            rotation: 20
+          },
+          {
+            id: 4,
+            rotation: -90
+          }
+        ];
+        
+      
+      window.addEventListener('load', (event) => {
+        cssSlider.classList.remove(hideCssSliderSelector);
+        init();
+      });
+
+      function init() {
+        let currentSlideNumber;
+
+        if (currentUrl.hash) {
+          currentSlideNumber = currentUrl.hash.replace(/\D/g, "");
+        } else if (!currentUrl.hash || currentUrl.hash == "") {
+          currentSlideNumber = 1;
+        }
+
+        appendFirstSlide(currentSlideNumber);
+        addEventListeners();
+      }
+
+      function appendFirstSlide(currentSlide){
+        const index = currentSlide - 1;
+
+        for (let i = index; i >= 0; i--){
+          let sliderItem = createSliderItem(imagesData[i].id, imagesData[i].rotation);
+          slider.insertAdjacentHTML("afterbegin", sliderItem);
+          loadedSlides.push(imagesData[i].id);
+        }
+      }
+      
+      function createSliderItem(id, rotation){
+        return `<div class="slider-item"><a-scene embedded xr-mode-ui="enabled: false;"><a-sky src="360_${id}.jpg" rotation="0 ${rotation} 0"></a-sky></a-scene></div>`;
+      }
+
+      function addEventListeners(){
+        navItems.forEach((navItem) => {
+          navItem.addEventListener("click", loadRemainingSlides);
+        });
+      }
+
+      function loadRemainingSlides(){
+        for (let i = 0; i <= imagesData.length - 1; i++){
+          if (loadedSlides.includes(imagesData[i].id)) continue;
+          let sliderItem = createSliderItem(imagesData[i].id, imagesData[i].rotation);
+          slider.insertAdjacentHTML("beforeend", sliderItem);
+          loadedSlides.push(imagesData[i].id);
+        }
+        removeEventListeners();
+      }
+
+      function removeEventListeners(){
+        navItems.forEach((navItem) => {
+          navItem.removeEventListener("click", loadRemainingSlides);
+        });
+      }
+    </script>
   </body>
 </html>
