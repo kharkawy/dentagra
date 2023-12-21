@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -201,14 +201,6 @@
               <li class="main-nav__li">
                 <a class="main-nav__a" href="#Contact" target="">Kontakt</a>
               </li>
-              <li class="main-nav__li">
-                <a
-                  class="main-nav__a"
-                  href="./media/wtyb0yqg/informacja_o_wp&#x142;ywie_dzia&#x142;alno&#x15B;ci_wykonywanej_przez_jednostk&#x119;.pdf"
-                  target="_blank"
-                  >Informacja</a
-                >
-              </li>
             </ul>
           </nav>
         </div>
@@ -254,7 +246,7 @@
         </div>
       </section>
 
-      <div class="block grid white-bg animate">
+      <div class="block grid white-bg animate" id="About">
         <div class="container container--big">
           <div class="row row--space-between row--v-top">
             <div class="col-50 col-s-100">
@@ -1052,8 +1044,14 @@
     </footer>
 
     <script>
-      document.getElementById("CurrentYear").innerHTML =
-        new Date().getFullYear();
+      const currentYearElement = document.getElementById("CurrentYear");
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          currentYearElement.innerHTML = new Date().getFullYear();
+        });
+      } else {
+        currentYearElement.innerHTML = new Date().getFullYear();
+      }
     </script>
 
     <script
